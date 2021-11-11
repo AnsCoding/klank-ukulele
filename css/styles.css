@@ -1,0 +1,170 @@
+@font-face {
+    font-family: 'Onboard Free';
+    src: url('fonts/ONBOARD FREE.TTF');
+}
+@import url("https://use.typekit.net/vjp5soz.css");
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #FFE8A2;
+    display: grid;
+    grid-template-rows: 100vh 100vh 100vh;
+    grid-template-areas:
+        "header"
+        "main"
+        "section"
+    ;
+}
+.headline{
+    padding-top: 10em;
+    display: flex;
+    justify-content: center;
+}
+h1{
+    font-family: 'Onboard Free';
+    font-size: 400px;
+    color: #FFDD72;
+    text-shadow: 6px 6px 0px rgb(235 196 72);
+    z-index: 2;
+    position: absolute;
+}
+header{
+    background-color: #F9F9EE;
+    grid-area: header;
+}
+main{
+    grid-area: main;
+}
+section{
+    grid-area: section;
+    background-image: url('../img/ukulele-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*---------- Header - Section ----------*/
+.ukulele-kvinde img{
+    min-width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: -10vh;
+    z-index: 2;
+}
+
+/* Noder */
+.noder img{
+    width: 50px;
+    animation: node 7s linear infinite;
+}
+.noder{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: -5vh;
+    z-index: 1;
+}
+@keyframes node{
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
+.noder img:nth-child(1){
+    animation-delay: 2s;
+    width: 7%;
+}
+.noder img:nth-child(2){
+    animation-delay: 1s;
+    width: 6%
+}
+.noder img:nth-child(3){
+    animation-delay: 3s;
+    width: 8%;
+}
+.noder img:nth-child(4){
+    animation-delay: 4.5s;
+    width: 3%;
+}
+.noder img:nth-child(5){
+    animation-delay: 3s;
+    width: 3%;
+}
+.noder img:nth-child(6){
+    animation-delay: 6s;
+    width: 4%;
+}
+.noder img:nth-child(7){
+    animation-delay: 7s;
+    width: 8%;
+}
+.node:in-range {
+    animation-play-state: paused;
+}
+/* Noder END*/
+/*---------- Header - Section - END ----------*/
+
+/*---------- Main - Section ----------*/
+.video-player{
+    height: 40em;
+    display: flex;
+    justify-content: center;
+    padding-top: 13em;
+    position: relative;
+}
+.video-player video{
+    box-shadow: 20px 20px 0px rgb(255 166 23);
+}
+.ukulele-pick{
+    position: absolute;
+    bottom: -43px;
+    right: 70px;
+}
+.ukulele-pick img{
+    width: 20em;
+}
+/*---------- Main - Section - END ----------*/
+/*---------- Info - Section ----------*/
+h2{
+    font-size: 150px;
+    font-family: 'Onboard Free';
+    color: #ffffff;
+    text-shadow: 6px 6px 0px rgb(235 198 78);
+    text-align: center;
+    margin-top: 1em;
+}
+p{
+    font-size: 24px;
+    font-family: proxima-nova, sans-serif;
+    color: #ffffff;
+    text-shadow: 1px 1px 0px rgb(235 198 78);
+    text-align: center;
+    margin: 3em auto 4em auto;
+    max-width: 628px;
+}
+.button{
+    display: flex;
+}
+#info a{
+    color: #ffffff;
+    background-color: #FFA617;
+    box-shadow: 6px 7px 0px rgb(255 206 108);
+    margin: 0 auto;
+    padding: .7em 2.5em;
+    font-size: 36px;
+    font-family: proxima-nova, sans-serif;
+    text-decoration: none;
+}
+/*---------- Info - Section - END ----------*/
