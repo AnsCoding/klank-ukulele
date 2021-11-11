@@ -127,13 +127,8 @@ section{
 .video-player video{
     box-shadow: 20px 20px 0px rgb(255 166 23);
 }
-.ukulele-pick{
-    position: absolute;
-    bottom: -43px;
-    right: 70px;
-}
-.ukulele-pick img{
-    width: 20em;
+video[poster]{
+    object-fit:cover;
 }
 /*---------- Main - Section - END ----------*/
 /*---------- Info - Section ----------*/
